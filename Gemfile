@@ -70,3 +70,4 @@ group :test do
 
   gem "shoulda-matchers", "6.4.0"
 end
+gem 'rails-controller-testing', group: [:test]
