@@ -1,0 +1,37 @@
+<section id="show-container">
+  <div class="area">
+    <h2> <%= @flat.name %> </h2>
+    <div class="flat-picture">
+      <!--After adding picture url table/Add flat picture-->
+    </div>
+    <p class="flat-address"> <%= @flat.address %> </p>
+    <div class="show-display">
+      <h3>A quick description...</h3>
+      <p> <%= @flat.description %> </p>
+    </div> €
+    <div class="booking">
+      <p class="price"><%= @flat.price_per_night %>€</p> <p>per night</p>
+    <div class="booking-display">
+      <%= form_with model: [@flat, @booking] do |form| %>
+      <div class="label">
+        <%= form.label :start_date, "From:" %>
+        <%= form.date_field :start_date, placeholder: "Flat name" %>
+      </div>
+
+      <div class="label">
+        <%= form.label :end_date, "To:" %>
+        <%= form.date_field :end_date, placeholder: "Flat name" %>
+      </div>
+
+      <div class="label">
+        <%= form.submit("Book")%>
+      </div>
+    <% end %>
+    </div>
+    </div>
+  </div>
+
+  <div class="half2">
+
+  </div>
+</section>
