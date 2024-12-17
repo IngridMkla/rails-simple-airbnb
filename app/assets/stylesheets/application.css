@@ -1,10 +1,363 @@
 /*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+* This is a manifest file that'll be compiled into application.css.
+*
+* With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+* application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+* cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+* depending on specificity.
+*
+* Consider organizing styles into separate files for maintainability.
+*/
+body{
+  background-color: rgb(245, 245, 247);
+}
+#page-title {
+  text-align: center;
+}
+
+#navigation-bar {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+align-items: center;
+height: 7vh;
+}
+
+#navigation-bar div{
+align-items: center;
+}
+
+#navigation-bar .icone i {
+color: black;
+font-size: 20px;
+transition: color 0.3s ease, transform 0.3s ease;
+
+}
+#navigation-bar .icone i:hover {
+color:rgb(71, 71, 248);
+transform: scale(1.2);
+cursor: pointer;
+
+}
+#navigation-bar div .nav-links {
+display: flex;
+list-style: none;
+font-size: large;
+gap: 5rem;
+}
+#navigation-bar div .nav-links button{
+background-color: transparent;
+border: 1.7px solid black;
+border-radius: 7px;
+color: black;
+cursor: pointer;
+text-align: center;
+text-transform: uppercase;
+transition: background-color 300ms;
+}
+#navigation-bar .nav-links form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 20px auto;
+  }
+#navigation-bar .nav-links form input{
+  border: 1px solid black;
+  max-width: 300px;
+  border-radius: 10px;
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  gap: 5rem;
+  width: 100%;
+  height: 20%;
+  }
+
+/*index page*/
+
+#menu button {
+color: #000;
+background-color: transparent;
+border: 1px solid black;
+border-radius: 1px;
+text-decoration: none;
+}
+#menu button:hover {
+color: #000;
+text-decoration: none;
+}
+
+#menu .home-picture{
+  height: 500px;
+  font-size: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  cursor: default;
+  background-size: cover;
+  background-image: url('home_picture.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  margin: 20px;}
+
+#menu .home-picture p{
+  color: white;
+  padding-top: 100px;
+}
+#menu .home-picture button{
+  font-size: large;
+  background-color: transparent;
+  border: 1.7px solid white ;
+  border-radius: 17px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  text-transform:uppercase ;
+  transition: background-color 300ms;
+}
+#menu .home-picture button:hover{
+  color: #fff;
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+}
+
+/*index page -> flats display*/
+#menu .flat-display{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15)
+}
+
+#menu .top-part{
+  text-align: center;
+}
+
+/*new -> form display*/
+#form-partial{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 32%;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15)
+}
+
+#form-partial div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#form-partial .form-wrapper div{
+  border: none;
+  border-radius: 16px;
+  box-shadow: inset 0 0px 7px rgba(0, 0, 0, 0.12);
+  margin-bottom: px;
+}
+
+#form-partial div .error-message{
+  color: rgb(145, 0, 0);
+}
+
+#form-partial .form-wrapper{
+  align-items: center;
+  width: 350px;
+}
+
+#form-partial .form-wrapper div .label{
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#form-partial .form-wrapper div .input{
+  border: none;
+  width: 350px;
+  text-align: bottom;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  margin-left: 10px;
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+
+#form-partial div .submit{
+  background-color: rgb(71, 71, 248);
+  width: 100px;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#form-partial div .submit:hover {
+  color:rgb(195, 156, 213);
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+/*show page*/
+
+#show-container{
+  background-color: white;
+  padding: 30px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+}
+
+#show-container .area h2{
+  margin-bottom: 5px;
+}
+
+#show-container .area .flat-picture{
+  border-radius: 30px;
+  width: 100%;
+  height: 600px;
+  margin-top: 30px;
+}
+
+#show-container .area h4{
+  margin: 40px 0;
+}
+
+
+/*decorations*/
+
+#show-container div .decoration{
+  border-top: 2px solid rgb(188, 188, 190);
+  margin: 20px 0x;
+}
+
+/*show(flats) + new(bookings) -> booking form*/
+#show-container div .booking{
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+#show-container div .booking .txt{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#show-container div .booking .txt .price{
+  font-weight: 500;
+  font-size: 20px;
+  padding-right: 10px;
+  color: #000;
+}
+
+#show-container div .booking .txt p{
+  font-weight: 400;
+  color: #515151;
+}
+
+.booking-form-wrapper {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-items-wrapper{
+  border: 1px solid black;
+  border-radius: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.form-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3px 10px;
+}
+.form-items .label{
+  font-weight: 500;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.form-items .input{
+  border: none;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+}
+.submit-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.submit-button .submit{
+  background-color: rgb(71, 71, 248);
+  width: 100px;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button .submit:hover {
+  color:rgb(195, 156, 213);
+  transform: scale(0.9);
+  cursor: pointer;
+}
+/*show page*/
+
+.items-display{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.show-display{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 60%;
+}
+
+.booking {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-right: 100px;
+  padding: 15px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+
