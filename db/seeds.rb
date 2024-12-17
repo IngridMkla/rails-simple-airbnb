@@ -6,16 +6,16 @@ Flat.create!(
   description: "A lovely and confortable place, it is made to welcome a small group of people for a pleasant experience! We hope you will enjoy your future stay in our flat <3",
   price_per_night: 75,
   number_of_guests: 4,
-  picture_url: "https://unsplash.com/fr/photos/femme-assise-sur-un-canape-blanc-pres-de-la-fenetre-4t8_1MKvPd8"
+  picture_url: "https://images.unsplash.com/photo-1526055577108-80193f001dde?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Flat.create!(
-  name: "Rustic House In House",
+  name: "Rustic House In Forest",
   address: "10 rue des cedres, Paris",
   description: "Let's reconnect with nature by experiencing true outdoor living in our house, surronded with nature ;)",
   price_per_night: 75,
   number_of_guests: 3,
-  picture_url: "https://unsplash.com/fr/photos/un-hamac-suspendu-entre-deux-arbres-dans-une-foret-WQQswVWpgGc"
+  picture_url: "https://images.unsplash.com/photo-1634656519978-824089f32045?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Flat.create!(
@@ -24,7 +24,7 @@ Flat.create!(
   description: "A lovely and confortable place, it is made to welcome a small group of people for a pleasant experience! We hope you will enjoy your future stay in our flat <3",
   price_per_night: 75,
   number_of_guests: 2,
-  picture_url: "https://unsplash.com/fr/photos/deux-chaises-assises-devant-une-piscine-k_My4rXk4Lc"
+  picture_url: "https://images.unsplash.com/photo-1605352081428-500953badc02?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Flat.create!(
@@ -33,7 +33,7 @@ Flat.create!(
   description: "A lovely and confortable place, it is made to welcome a small group of people for a pleasant experience! We hope you will enjoy your future stay in our flat <3",
   price_per_night: 75,
   number_of_guests: 5,
-  picture_url: "https://unsplash.com/fr/photos/un-balcon-avec-une-table-des-chaises-et-un-canape-WvP7bpgdkYM"
+  picture_url: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 puts "Adding bookings to database...🚀"

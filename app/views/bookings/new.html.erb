@@ -1,0 +1,36 @@
+<div class="booking-form-wrapper">
+  <turbo-frame id="booking-display">
+    <%= form_with model: [@flat, @booking], html: { class: "booking-form"} do |form| %>
+      <div class="form-items-wrapper">
+        <div class="form-items">
+          <%= form.label :start_date, "CHECK-IN", class: "label" %>
+          <%= form.date_field :start_date, class: "input" %>
+        </div>
+        <% @booking.errors.full_messages_for(:start_date).each do |message| %>
+          <p class="error-message"><%= message %></p>
+        <% end %>
+
+        <div class="form-items">
+          <%= form.label :end_date, "CHECKOUT", class: "label" %>
+          <%= form.date_field :end_date, class: "input" %>
+        </div>
+        <% @booking.errors.full_messages_for(:end_date).each do |message| %>
+          <p class="error-message"><%= message %></p>
+        <% end %>
+
+        <div class="form-items">
+          <%= form.label :number_of_people, "GUESTS", class: "label" %>
+          <%= form.number_field :number_of_people, min:1, step: 1, class: "input" %>
+        </div>
+        <% @booking.errors.full_messages_for(:number_of_people).each do |message| %>
+          <p class="error-message"><%= message %></p>
+        <% end %>
+      </div>
+
+      <div class="submit-button">
+        <%= form.submit "Book", class: "submit" %>
+      </div>
+    <% end %>
+  </turbo-frame>
+</div>
+

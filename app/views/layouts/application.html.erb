@@ -40,6 +40,15 @@
             </form>
         </div>
     </nav>
+
+    <% flash.each do |type, message| %>
+      <% if type == "notice" || type == "alert" %>
+        <div class="alert <%= type == "notice" ? 'alert-success' : 'alert-danger' %>">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

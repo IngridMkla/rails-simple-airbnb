@@ -1,37 +1,29 @@
 <section id="show-container">
   <div class="area">
+
     <h2> <%= @flat.name %> </h2>
-    <div class="flat-picture">
-      <!--After adding picture url table/Add flat picture-->
-    </div>
-    <p class="flat-address"> <%= @flat.address %> </p>
-    <div class="show-display">
-      <h3>A quick description...</h3>
-      <p> <%= @flat.description %> </p>
-    </div> €
-    <div class="booking">
-      <p class="price"><%= @flat.price_per_night %>€</p> <p>per night</p>
-    <div class="booking-display">
-      <%= form_with model: [@flat, @booking] do |form| %>
-      <div class="label">
-        <%= form.label :start_date, "From:" %>
-        <%= form.date_field :start_date, placeholder: "Flat name" %>
+    <div class="flat-picture" style="background-image: url(<%=@flat.picture_url%>);"></div>
+    <h4 class="flat-address"> <%= @flat.address %> </h4>
+    <div class="decoration"></div>
+
+    <div class="items-display">
+
+      <div class="show-display">
+        <h4>A quick description...</h4>
+        <p> <%= @flat.description %> </p>
       </div>
 
-      <div class="label">
-        <%= form.label :end_date, "To:" %>
-        <%= form.date_field :end_date, placeholder: "Flat name" %>
+      <div class="booking">
+        <div class="txt">
+          <p class="price"> <%= @flat.price_per_night %>€</p><p>per night</p>
+        </div>
+
+        <turbo-frame id="booking-display" src="<%= new_flat_booking_path(@flat)%>">
+          <p>Booking form loading...💃</p>
+        </turbo-frame>
+
+        </div>
       </div>
-
-      <div class="label">
-        <%= form.submit("Book")%>
-      </div>
-    <% end %>
     </div>
-    </div>
-  </div>
-
-  <div class="half2">
-
   </div>
 </section>

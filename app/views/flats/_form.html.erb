@@ -1,52 +1,59 @@
 <!-- form_with -->
 <div id="form-partial">
   <%= form_with model: flat do |form| %>
-  <div>
-    <p class="label"><%= form.label :name, "Flat name" %></p>
-    <p class="field"><%= form.text_field :name, placeholder: "Flat name" %></p>
-    <% flat.errors.full_messages_for(:name).each do |message| %>
-      <div class="error-message"><%= message %></div>
-    <% end %>
-  </div>
+    <div class="form-wrapper">
+      <div>
+        <%= form.label :name, "Flat name", class: "label" %>
+        <%= form.text_field :name, placeholder:"Enter flat name",class: "input" %>
+      </div>
+      <% flat.errors.full_messages_for(:name).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-  <div>
-    <p class="label"><%= form.label :address, "Flat address" %></p>
-    <p class="field"><%= form.text_field :address, placeholder: "ex: 10 rue des rosier, 75006, Paris" %></p>
-    <% flat.errors.full_messages_for(:address).each do |message| %>
-      <div class="error-message"><%= message %></div>
-    <% end %>
-  </div>
+      <div>
+        <%= form.label :address, "Flat address", class: "label" %>
+        <%= form.text_field :address, placeholder: "ex: 10 rue des rosier, 75006, Paris", class: "input" %>
+      </div>
+      <% flat.errors.full_messages_for(:address).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-  <div>
-    <p class="label"><%= form.label :description, "Flat description" %></p>
-    <p class="field"><%= form.text_area :description %></p>
-    <% flat.errors.full_messages_for(:description).each do |message| %>
-      <div class="error-message"><%= message %></div>
-    <% end %>
-  </div>
+      <div>
+        <%= form.label :description, "Flat description", class: "label" %>
+        <%= form.text_area :description, placeholder:"Enter flat description", class: "input" %>
+      </div>
+      <% flat.errors.full_messages_for(:description).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-  <div>
-    <p class="label"><%= form.label :number_of_guests, "Number of guests" %></p>
-    <p class="field"><%= form.number_field :number_of_guests, min:1 %></p>
-    <% flat.errors.full_messages_for(:number_of_guests).each do |message| %>
-      <div class="error-message"><%= message %></div>
-    <% end %>
-  </div>
+      <div>
+        <%= form.label :number_of_guests, "Number of guests", class: "label" %>
+        <%= form.number_field :number_of_guests, placeholder:"Enter flat number of guests", min:1, class: "input" %>
+      </div>
+      <% flat.errors.full_messages_for(:number_of_guests).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-  <div>
-    <p class="label"><%= form.label :price_per_night, "Price per night ($)" %></p>
-    <p class="field"></p><%= form.number_field :price_per_night, step: 0.01, min:0 %>
-    <% flat.errors.full_messages_for(:price_per_night).each do |message| %>
-      <div class="error-message"><%= message %></div>
-    <% end %>
-  </div>
+      <div>
+        <%= form.label :price_per_night, "Price per night ($)", class: "label" %>
+        <%= form.number_field :price_per_night, placeholder:"Enter flat price per night", step: 0.01, min:0, class: "input" %>
+      </div>
+      <% flat.errors.full_messages_for(:price_per_night).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-  <div>
-    <%= form.submit("Save")%>
-  </div>
-<% end %>
-</form>
+      <div>
+        <%= form.label :picture_url, "Picture url (picture/preview of flat)", class: "label" %>
+        <%= form.url_field :picture_url, placeholder:"Enter picture url", class: "input"%>
+      </div>
+      <% flat.errors.full_messages_for(:picture_url).each do |message| %>
+        <p class="error-message"><%= message %></p>
+      <% end %>
 
-<% if notice %>
-  <= <div class="notice"><%= notice %></div> >
-<% end %>
+    </div>
+
+    <div>
+      <%= form.submit "Save", class: "submit"%>
+    </div>
+  <% end %>
+</div>
